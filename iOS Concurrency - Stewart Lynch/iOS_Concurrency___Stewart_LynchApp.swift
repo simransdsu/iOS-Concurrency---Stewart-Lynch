@@ -3,7 +3,7 @@
 import SwiftUI
 
 @main
-struct ___PACKAGENAME:identifier___App: App {
+struct iOS_Concurrency___Stewart_LynchApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
