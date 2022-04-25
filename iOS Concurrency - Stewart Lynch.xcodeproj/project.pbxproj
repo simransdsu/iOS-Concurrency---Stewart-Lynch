@@ -8,23 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		4972B9102816F51400E10699 /* iOS_Concurrency___Stewart_LynchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972B90F2816F51400E10699 /* iOS_Concurrency___Stewart_LynchApp.swift */; };
-		4972B9122816F51400E10699 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972B9112816F51400E10699 /* ContentView.swift */; };
+		4972B9122816F51400E10699 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972B9112816F51400E10699 /* UserListView.swift */; };
 		4972B9142816F51500E10699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4972B9132816F51500E10699 /* Assets.xcassets */; };
 		4972B9172816F51500E10699 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4972B9162816F51500E10699 /* Preview Assets.xcassets */; };
 		4972B91F2816F65D00E10699 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972B91E2816F65D00E10699 /* User.swift */; };
 		4972B9212816F6BD00E10699 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972B9202816F6BD00E10699 /* Post.swift */; };
 		4972B9242816F82200E10699 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972B9232816F82200E10699 /* APIService.swift */; };
+		4972B928281742B000E10699 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972B927281742B000E10699 /* UserListViewModel.swift */; };
+		4972B92A281744EC00E10699 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 4972B929281744EC00E10699 /* users.json */; };
+		4972B92C2817451100E10699 /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 4972B92B2817451100E10699 /* posts.json */; };
+		4972B92F281746E800E10699 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972B92E281746E800E10699 /* BundleExtensions.swift */; };
+		4972B9312817481F00E10699 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972B9302817481F00E10699 /* MockData.swift */; };
+		4972B9332817494A00E10699 /* PostsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972B9322817494A00E10699 /* PostsListViewModel.swift */; };
+		4972B935281749C000E10699 /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972B934281749C000E10699 /* PostsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4972B90C2816F51400E10699 /* iOS Concurrency - Stewart Lynch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Concurrency - Stewart Lynch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4972B90F2816F51400E10699 /* iOS_Concurrency___Stewart_LynchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iOS_Concurrency___Stewart_LynchApp.swift"; sourceTree = "<group>"; };
-		4972B9112816F51400E10699 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4972B9112816F51400E10699 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		4972B9132816F51500E10699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4972B9162816F51500E10699 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4972B91E2816F65D00E10699 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4972B9202816F6BD00E10699 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		4972B9232816F82200E10699 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		4972B927281742B000E10699 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		4972B929281744EC00E10699 /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		4972B92B2817451100E10699 /* posts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
+		4972B92E281746E800E10699 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
+		4972B9302817481F00E10699 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		4972B9322817494A00E10699 /* PostsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListViewModel.swift; sourceTree = "<group>"; };
+		4972B934281749C000E10699 /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +71,12 @@
 		4972B90E2816F51400E10699 /* iOS Concurrency - Stewart Lynch */ = {
 			isa = PBXGroup;
 			children = (
+				4972B92D281746D900E10699 /* Extensions */,
+				4972B926281742A300E10699 /* ViewModels */,
+				4972B9252817427500E10699 /* Views */,
 				4972B9222816F81800E10699 /* Services */,
 				4972B91D2816F65300E10699 /* Models */,
 				4972B90F2816F51400E10699 /* iOS_Concurrency___Stewart_LynchApp.swift */,
-				4972B9112816F51400E10699 /* ContentView.swift */,
 				4972B9132816F51500E10699 /* Assets.xcassets */,
 				4972B9152816F51500E10699 /* Preview Content */,
 			);
@@ -71,6 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				4972B9162816F51500E10699 /* Preview Assets.xcassets */,
+				4972B929281744EC00E10699 /* users.json */,
+				4972B92B2817451100E10699 /* posts.json */,
+				4972B9302817481F00E10699 /* MockData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -90,6 +109,32 @@
 				4972B9232816F82200E10699 /* APIService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		4972B9252817427500E10699 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4972B9112816F51400E10699 /* UserListView.swift */,
+				4972B934281749C000E10699 /* PostsListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4972B926281742A300E10699 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4972B927281742B000E10699 /* UserListViewModel.swift */,
+				4972B9322817494A00E10699 /* PostsListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4972B92D281746D900E10699 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4972B92E281746E800E10699 /* BundleExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +195,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4972B92A281744EC00E10699 /* users.json in Resources */,
 				4972B9172816F51500E10699 /* Preview Assets.xcassets in Resources */,
 				4972B9142816F51500E10699 /* Assets.xcassets in Resources */,
+				4972B92C2817451100E10699 /* posts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,10 +209,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4972B9122816F51400E10699 /* ContentView.swift in Sources */,
+				4972B9122816F51400E10699 /* UserListView.swift in Sources */,
+				4972B92F281746E800E10699 /* BundleExtensions.swift in Sources */,
+				4972B928281742B000E10699 /* UserListViewModel.swift in Sources */,
+				4972B9332817494A00E10699 /* PostsListViewModel.swift in Sources */,
 				4972B9242816F82200E10699 /* APIService.swift in Sources */,
 				4972B9102816F51400E10699 /* iOS_Concurrency___Stewart_LynchApp.swift in Sources */,
+				4972B9312817481F00E10699 /* MockData.swift in Sources */,
 				4972B91F2816F65D00E10699 /* User.swift in Sources */,
+				4972B935281749C000E10699 /* PostsListView.swift in Sources */,
 				4972B9212816F6BD00E10699 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
