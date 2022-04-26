@@ -11,9 +11,36 @@ struct APIService {
     
     let urlString: String
     
+    
     func getJSON<ResponseType: Decodable>(dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .iso8601,
-                                           keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys,
-                                           completion: @escaping (Result<ResponseType, APIError>) -> Void) {
+                                          keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys) async throws -> ResponseType {
+        guard let url = URL(string: urlString) else {
+            throw APIError.invalidURL
+        }
+        
+        do {
+            let (data, response) = try await URLSession.shared.data(from: url)
+            guard let httpResponse = response as? HTTPURLResponse,
+                  httpResponse.statusCode == 200 else {
+                      throw APIError.invalidResponse
+                  }
+            
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = dateDecodingStrategy
+            decoder.keyDecodingStrategy = keyDecodingStrategy
+            
+            let decodedData = try decoder.decode(ResponseType.self, from: data)
+                
+            return decodedData
+        } catch {
+            throw APIError.dataTaskError(error.localizedDescription)
+        }
+        
+    }
+    
+    func getJSON<ResponseType: Decodable>(dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .iso8601,
+                                          keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys,
+                                          completion: @escaping (Result<ResponseType, APIError>) -> Void) {
         guard let url = URL(string: urlString) else {
             completion(.failure(.invalidURL))
             return
