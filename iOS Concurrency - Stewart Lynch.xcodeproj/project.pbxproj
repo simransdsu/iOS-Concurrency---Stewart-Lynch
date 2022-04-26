@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		496426C12818417100FED33B /* UserAndPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496426C02818417100FED33B /* UserAndPosts.swift */; };
 		4972B9102816F51400E10699 /* iOS_Concurrency___Stewart_LynchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972B90F2816F51400E10699 /* iOS_Concurrency___Stewart_LynchApp.swift */; };
 		4972B9122816F51400E10699 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972B9112816F51400E10699 /* UserListView.swift */; };
 		4972B9142816F51500E10699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4972B9132816F51500E10699 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		496426C02818417100FED33B /* UserAndPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAndPosts.swift; sourceTree = "<group>"; };
 		4972B90C2816F51400E10699 /* iOS Concurrency - Stewart Lynch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Concurrency - Stewart Lynch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4972B90F2816F51400E10699 /* iOS_Concurrency___Stewart_LynchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iOS_Concurrency___Stewart_LynchApp.swift"; sourceTree = "<group>"; };
 		4972B9112816F51400E10699 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				4972B91E2816F65D00E10699 /* User.swift */,
 				4972B9202816F6BD00E10699 /* Post.swift */,
+				496426C02818417100FED33B /* UserAndPosts.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				496426C12818417100FED33B /* UserAndPosts.swift in Sources */,
 				4972B9122816F51400E10699 /* UserListView.swift in Sources */,
 				4972B92F281746E800E10699 /* BundleExtensions.swift in Sources */,
 				4972B928281742B000E10699 /* UserListViewModel.swift in Sources */,
