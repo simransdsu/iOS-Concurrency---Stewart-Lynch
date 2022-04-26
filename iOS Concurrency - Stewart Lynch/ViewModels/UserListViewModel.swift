@@ -10,10 +10,22 @@ import Foundation
 class UserListViewModel: ObservableObject {
     
     @Published var users: [User] = []
+    @Published var isLoading: Bool = false
+    @Published var showAlert: Bool = false
+    @Published var errorMessage: String?
     
     func fetchUsers() {
         let apiService = APIService(urlString: "https://jsonplaceholder.typicode.com/users")
+        
+        isLoading.toggle()
         apiService.getJSON { (result: Result<[User], APIError>) in
+            
+            defer {
+                DispatchQueue.main.async {
+                    self.isLoading.toggle()
+                }
+            }
+            
             switch result {
             case .success(let success):
                 DispatchQueue.main.async {
@@ -22,6 +34,8 @@ class UserListViewModel: ObservableObject {
             case .failure(let failure):
                 DispatchQueue.main.async {
                     print("❌", failure)
+                    self.showAlert = true
+                    self.errorMessage = failure.localizedDescription + "\n Please contact the developer and provide this error and steps to reproduce"
                 }
             }
         }

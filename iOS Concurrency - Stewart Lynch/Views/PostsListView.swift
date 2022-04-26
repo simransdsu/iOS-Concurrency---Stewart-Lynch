@@ -10,7 +10,7 @@ import SwiftUI
 struct PostsListView: View {
     
     #warning("Remove the forPreview argument or set it to false before uploading to AppStore")
-    @StateObject var vm = PostsListViewModel(forPreview: true)
+    @StateObject var vm = PostsListViewModel(forPreview: false)
     
     var userId: Int
     
@@ -26,6 +26,18 @@ struct PostsListView: View {
                 }
             }
         }
+        .overlay(content: {
+            if vm.isLoading {
+                ProgressView()
+            }
+        })
+        .alert("Application Error", isPresented: $vm.showAlert, actions: {
+            Button("OK") {}
+        }, message: {
+            if let errorMessage = vm.errorMessage {
+                Text(errorMessage)
+            }
+        })
         .navigationTitle("Posts")
         .navigationBarTitleDisplayMode(.inline)
         .listStyle(.plain)

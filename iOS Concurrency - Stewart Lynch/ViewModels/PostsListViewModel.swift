@@ -10,13 +10,23 @@ import Foundation
 class PostsListViewModel: ObservableObject {
     
     @Published var posts: [Post] = []
+    @Published var isLoading: Bool = false
+    @Published var showAlert: Bool = false
+    @Published var errorMessage: String?
     
     var userId: Int?
     
     func fetchPosts() {
         if let userId = userId {
             let apiService = APIService(urlString: "https://jsonplaceholder.typicode.com/user/\(userId)/posts")
+            isLoading.toggle()
             apiService.getJSON { (result: Result<[Post], APIError>) in
+                defer {
+                    DispatchQueue.main.async {
+                        self.isLoading.toggle()
+                    }
+                }
+                
                 switch result {
                 case .success(let success):
                     DispatchQueue.main.async {
@@ -25,6 +35,8 @@ class PostsListViewModel: ObservableObject {
                 case .failure(let failure):
                     DispatchQueue.main.async {
                         print("❌", failure)
+                        self.showAlert = true
+                        self.errorMessage = failure.localizedDescription + "\n Please contact the developer and provide this error and steps to reproduce"
                     }
                 }
             }
