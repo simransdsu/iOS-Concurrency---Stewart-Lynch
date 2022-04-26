@@ -24,11 +24,13 @@ class UserListViewModel: ObservableObject {
         }
         
         do {
-            let users: [User] = try await apiServiceUsers.getJSON()
-            let posts: [Post] = try await apiServicePosts.getJSON()
+            async let users: [User] = try await apiServiceUsers.getJSON()
+            async let posts: [Post] = try await apiServicePosts.getJSON()
             
-            for user in users {
-                let userPosts = posts.filter { $0.userId == user.id }
+            let (fetchedUser, fetchedPosts) = await (try users, try posts)
+            
+            for user in fetchedUser {
+                let userPosts = fetchedPosts.filter { $0.userId == user.id }
                 usersAndPosts.append(UserAndPosts(user: user, posts: userPosts))
             }
             
